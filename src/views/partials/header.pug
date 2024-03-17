@@ -26,4 +26,4 @@ header
                             if loggedInUser.socialOnly
                                 img.header__avatar(src=`${loggedInUser.avatarUrl}`)
                             else
-                                img.header__avatar(src="/" + loggedInUser.avatarUrl, alt="")
+                                img.header__avatar(src=loggedInUser.avatarUrl, alt="")

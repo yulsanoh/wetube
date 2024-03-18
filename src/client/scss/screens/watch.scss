@@ -17,6 +17,27 @@
       text-decoration: underline;
     }
   }
+  .video__edit {
+    margin-top: 30px;
+    a:hover {
+      color: $blue;
+    }
+  }
+}
+
+.video__add-comments {
+  .video__comment-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 8px 12px;
+      border: 1px solid $blue;
+      color: $blue;
+      background-color: #fff;
+    }
+  }
 }
 
 .video__comments {
@@ -29,7 +50,7 @@
   .video__comment {
     padding: 10px;
     border-radius: 10000px;
-    background-color: white;
+    border: 1px solid $borderColor;
     color: black;
     margin-bottom: 10px;
   }

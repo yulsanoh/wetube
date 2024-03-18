@@ -8,9 +8,11 @@ form {
   }
 
   input[type="submit"].btn__signup,
-  input[type="submit"].btn__login {
+  input[type="submit"].btn__login,
+  input[type="submit"].btn__upload {
     background-color: $blue;
     color: white;
+    cursor: pointer;
   }
   
   hr {
@@ -40,4 +42,8 @@ input[type="submit"],
   text-align: center;
   cursor: pointer;
   display: block;
+}
+
+.social__btn:hover {
+  color: $blue;
 }

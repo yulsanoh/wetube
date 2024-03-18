@@ -8,7 +8,7 @@ block content
         input(type="file", accept="video/*", required, id="video", name="video") 
         label(for="thumbnail") 영상 썸네일 
         input(type="file", accept="image/*", required, id="thumbnail", name="thumbnail") 
-        input(placeholder="Title", required, type="text", name="title", maxLength=80)
-        input(placeholder="Description", required, type="text", name="description" minLength=20)
-        input(placeholder="Hashtags, separated by comma.", required, type="text", name="hashtags")
-        input(type="submit", value="Upload Video")
+        input(placeholder="제목", required, type="text", name="title", maxLength=80)
+        input(placeholder="영상에 대한 설명", required, type="text", name="description" minLength=4)
+        input(placeholder="해쉬태그, 콤마(,)로 구분해주세요", required, type="text", name="hashtags")
+        input(type="submit", value="영상 업로드").btn__upload

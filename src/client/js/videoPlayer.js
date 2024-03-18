@@ -47,14 +47,14 @@ const handleVolumeChange = (event) => {
   } = event;
   if (video.muted) {
     video.muted = false;
-    muteButton.innerText = "Mute";
+    muteButtonIcon.classList = "fas fa-volume-mute";
   }
 
   if (Number(value) === 0) {
-    muteButton.innerText = "Unmute";
+    muteButtonIcon.classList = "fas fa-volume-up";
     video.muted = true;
   } else {
-    muteButton.innerText = "Mute";
+    muteButtonIcon.classList = "fas fa-volume-mute";
     video.muted = false;
   }
 
@@ -86,10 +86,10 @@ const handleTimelineChange = (event) => {
 const handleFullScreen = () => {
   const fullscreen = document.fullscreenElement;
   if (!fullscreen) {
-    fullScreenBtnIcon.innerText = "fas fa-expand";
+    fullScreenBtnIcon.classList = "fas fa-expand";
     videoContainer.requestFullscreen();
   } else {
-    fullScreenBtnIcon.innerText = "fas fa-compress";
+    fullScreenBtnIcon.classList = "fas fa-compress";
     document.exitFullscreen();
   }
 };
@@ -120,11 +120,10 @@ const handleMouseLeave = () => {
 const handleClickVideo = () => {
   if (video.paused) {
     video.play();
-    playButton.innerText = "Pause";
   } else {
     video.pause();
-    playButton.innerText = "Play";
   }
+  playButtonIcon.classList = video.paused ? "fas fa-play" : "fas fa-pause";
 };
 
 const handlePressKey = (event) => {
@@ -132,11 +131,10 @@ const handlePressKey = (event) => {
   if (keyCode === 32) {
     if (video.paused) {
       video.play();
-      playButton.innerText = "Pause";
     } else {
       video.pause();
-      playButton.innerText = "Play";
     }
+    playButtonIcon.classList = video.paused ? "fas fa-play" : "fas fa-pause";
   }
 };
 

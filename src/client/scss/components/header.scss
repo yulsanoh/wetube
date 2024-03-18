@@ -21,6 +21,11 @@ header {
       font-size: 16px;
     }
   }
+  a {
+    &:hover {
+      color: $blue;
+    }
+  }
   .header__btn {
     background-color: white;
     color: $blue;
@@ -28,6 +33,12 @@ header {
     border-radius: 20px;
     font-weight: 400;
     border: 1px solid #eee;
+
+    &:hover {
+      color: white;
+      background-color: $blue;
+    }
+
   }
   .header__avatar {
     width: 50px;

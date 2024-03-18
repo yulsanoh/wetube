@@ -21,6 +21,7 @@ block content
                     i.fas.fa-expand
     div.video__data
         p.video__title=video.title
+        p=video.description
         small.video__owner Uploaded by 
             a(href=`/users/${video.owner._id}`)=video.owner.name
         small.video__createdAt=new Date(video.createdAt).toLocaleDateString("ko-kr", {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})
@@ -41,9 +42,9 @@ block content
                 each comment in video.comments.reverse()
                     li.video__comment(data-id=`${comment._id}`)
                         i.fas.fa-comment
-                        span #{comment.text}
+                        span  #{comment.text}
                         if String(loggedInUser._id) === String(comment.owner._id)
-                            span#deleteBtn ❌
+                            span#deleteBtn  ❌
 
 block scripts 
     script(src="/assets/js/videoPlayer.js")

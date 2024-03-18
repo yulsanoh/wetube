@@ -63,4 +63,14 @@ main {
     background-color: tomato;
     color: white;
   }
+
+  &.success {
+    background-color: $blue;
+    color: white;
+  }
+
+  &.info {
+    background-color: #157347;
+    color: white;
+  }
 }

@@ -4,12 +4,13 @@ block content
     if(errorMessage)
         span=errorMessage
     form(method="POST") 
-        input(name="username", required, type="text" placeholder="Username")
-        input(name="email", required, type="email" placeholder="Email")
-        input(name="name", required, type="text" placeholder="Name")
-        input(name="password", required, type="password" placeholder="Password")
-        input(name="confirmPassword", required, type="password" placeholder="Confirm Password")
-        input(type="submit", value="Join")
+        input(name="username", required, type="text" placeholder="아이디")
+        input(name="email", required, type="email" placeholder="이메일")
+        input(name="name", required, type="text" placeholder="이름")
+        input(name="password", required, type="password" placeholder="패스워드")
+        input(name="confirmPassword", required, type="password" placeholder="패스워드 확인")
+        input(type="submit", value="회원가입").btn__signup
+        hr
         include partials/social-login
     div.auth-switch
         span 이미 계정이 있으신가요? 

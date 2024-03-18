@@ -4,11 +4,9 @@ block content
     if(errorMessage)
         span=errorMessage
     form(method="POST") 
-        input(name="username", required, type="text" placeholder="Username")
-        input(name="password", required, type="password" placeholder="Password")
-        input(type="submit", value="Join")
-        br
-        a(href="/users/github/start") Continue with GitHub &rarr;
+        input(name="username", required, type="text" placeholder="아이디")
+        input(name="password", required, type="password" placeholder="패스워드")
+        input(type="submit", value="로그인").btn__login
         include partials/social-login
     div.auth-switch
         span 계정이 없으신가요? 

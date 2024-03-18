@@ -8,16 +8,16 @@ header
                     i.fas.fa-search
             if !loggedIn
                 li
-                    a(href="/join") Join
+                    a(href="/join") 회원가입
                 li
-                    a(href="/login").header__btn LogIn
+                    a(href="/login").header__btn 로그인
             else 
                 li
-                    a(href="/videos/upload") Upload Video
+                    a(href="/videos/upload") 동영상 업로드
                 li
-                    a(href="/users/edit") Edit Profile
+                    a(href="/users/edit") 프로필 변경
                 li
-                    a(href="/users/logout") Log Out
+                    a(href="/users/logout") 로그아웃
                 li 
                     a(href=`/users/${loggedInUser._id}`)
                         if (loggedInUser.avatarUrl === "")
